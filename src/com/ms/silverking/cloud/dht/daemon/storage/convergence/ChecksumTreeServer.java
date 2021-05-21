@@ -270,7 +270,7 @@ public class ChecksumTreeServer {
       } catch (BufferOverflowException bfe) {
         pmg = null;
         if (bufferSize == Integer.MAX_VALUE) {
-          throw new RuntimeException("Buffer limit reached");
+          throw new RuntimeException("Buffer limit reached:" + bfe.getMessage(), bfe);
         } else {
           if (debug) {
             System.out.printf("raising checksum tree buffer limit %s\n", uuid);

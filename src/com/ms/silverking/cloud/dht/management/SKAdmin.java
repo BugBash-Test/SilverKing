@@ -567,7 +567,7 @@ public class SKAdmin {
     return getJavaCmdStart(options, classVars,
         escaped) + " " + options.mainClass + " " + options.extraMainClassArgs + " " + reapPolicyOptions + " -n " + gc.getClientDHTConfiguration().getName() + " -z " + gc.getClientDHTConfiguration().getZKConfig() + " -into " + options.inactiveNodeTimeoutSeconds + (
         options.overridePort >= 0 ?
-            String.format(" -port %s", options.overridePort) :
+            String.format(" -port %d", options.overridePort) :
             "");
   }
 

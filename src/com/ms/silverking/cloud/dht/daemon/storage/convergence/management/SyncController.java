@@ -505,7 +505,7 @@ class SyncController {
   }
 
   public String getStatus() {
-    return String.format("%s:%s:%s:%s:%s", ineligibleActionsSize, eligibleSyncsSize, activeSyncsSize,
+    return String.format("%d:%d:%d:%d:%d", ineligibleActionsSize, eligibleSyncsSize, activeSyncsSize,
         totalOutstandingSyncRetrievalRequests, ineligibleActionsSize + eligibleSyncsSize);
   }
 

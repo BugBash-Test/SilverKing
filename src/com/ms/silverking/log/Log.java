@@ -303,10 +303,7 @@ public final class Log {
 
   public static void severeAsync(String m) {
     if (levelMet(Level.SEVERE)) {
-      try {
-        logQueue.put(new LogEntry(Level.SEVERE, m));
-      } catch (InterruptedException ie) {
-      }
+      logQueue.put(new LogEntry(Level.SEVERE, m));
     }
   }
 
